@@ -33,7 +33,7 @@ export default async function ProductsPage() {
             </tr>
           </thead>
           <tbody>
-            {products.map((p: { id: string; name: string; sku: string; quantityOnHand: number; sellingPrice: number | null }) => (
+            {products.map((p: { id: string; name: string; sku: string; quantityOnHand: number; sellingPrice: { toString: () => string } | null }) => (
               <tr key={p.id} className="border-b last:border-0 hover:bg-gray-50">
                 <td className="p-4">{p.name}</td>
                 <td className="p-4 font-mono text-xs text-gray-600">{p.sku}</td>
